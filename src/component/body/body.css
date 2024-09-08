@@ -1,0 +1,39 @@
+/* Ensure the parent container takes the full width and height */
+.posters {
+    display: flex;
+    padding: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    gap: 10px; /* Space between images */
+  }
+  
+  /* Hide default scrollbar */
+  .posters::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Style for individual images */
+  .poster {
+    flex: 0 0 auto; /* Prevent shrinking or growing */
+    width: 200px; /* Adjust the width as needed */
+    height: 150px; /* Adjust the height as needed */
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+    scroll-snap-align: start;
+  }
+  
+  /* Zoom effect on hover */
+  .poster:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Navigation buttons styling (adjust as needed) */
+  button {
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
